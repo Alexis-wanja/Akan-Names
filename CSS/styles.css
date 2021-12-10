@@ -10,4 +10,16 @@
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+h1 {
+    color: pink;
+    text-align: center;
+}
+p{
+    color: papayawhip;
+    font-size: larger;
+    font-style: oblique;
 }
