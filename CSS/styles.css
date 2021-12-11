@@ -30,3 +30,18 @@ h3 {
     font-style: oblique;
     color: red;
 }
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: powderblue;
+}
+.form {
+    padding: 30px 40px;
+}
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+    background-color: plum;
+}
