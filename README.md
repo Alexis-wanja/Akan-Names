@@ -1,7 +1,7 @@
 # Project name
 This project is known as Akan Names. It is to test on recent acquired knowledge of javascript.
 
-#### Alexis Wanja, Date: 11/10/2021
+#### Date: 11/10/2021
 
 #### By **Alexis Wanja**
 
