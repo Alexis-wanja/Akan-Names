@@ -34,9 +34,9 @@ body{
 }
 .form {
     padding: 30px 40px;
-    background-color: turquoise;
+    background-color: rgb(117, 189, 248);
     align-items: center;
     text-align: center;
     font-style: oblique;
+    width: 50%;
 }
-
