@@ -28,7 +28,7 @@ p{
 h3 {
     text-align: center;
     font-style: oblique;
-    color: red;
+    color: blue;
 }
 body{
     display: flex;
@@ -38,10 +38,9 @@ body{
 }
 .form {
     padding: 30px 40px;
+    background-color: turquoise;
+    align-items: center;
+    text-align: center;
+    font-style: oblique;
 }
-.form-control{
-    margin-bottom: 10px;
-    padding-bottom: 20px;
-    position: relative;
-    background-color: palegreen;
-}
+
