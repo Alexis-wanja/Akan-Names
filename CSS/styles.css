@@ -6,7 +6,7 @@
     font-family: serif;
 }
 .background-image{
-    background-image: url(../CSS/img/images.jpg);
+    background-image: url(../CSS/img/image2.jpg);
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,11 +30,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: powderblue;
+    background-color: rgb(51, 48, 50);
 }
 .form {
     padding: 30px 40px;
-    background-color: rgb(117, 189, 248);
+    background-color: rgb(247, 132, 228);
     text-align: center;
     font-style: oblique;
     width: 30%;
