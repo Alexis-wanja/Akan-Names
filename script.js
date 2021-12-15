@@ -1,80 +1,39 @@
-function submition() {
-    let day = document.getElementById("day").value;
-    let dd = (day);
+var maleNames= ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw", "Kofi","Kwame"];
+var femaleNames = ["Akosua","Adwoa","Abenaa","Akua"," Yaa","Afua","Ama"];
 
-    let month = document.getElementById("month").value;
-    let mm = (month);
+function generateAkan(){
+  var year = document.getElementById("year").value;
 
-    let year = document.getElementById("year").value;
-    let yy = (month);
+  var month = document.getElementById("month").value;
 
-    let cc = Math.ceil(year / 20)
-    let result =(((cc / 4) - 2 * cc - 1) + ((5 * yy / 4)) + ((26 * (mm + 1) / 10)) + dd) % 7;
-  
-    let maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
-    let femaleNames = ["Akosua", " Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+  var day = document.getElementById("day").value;
 
-    if (document.getElementById("gender").animate) {
-      var gender = 'male';
-    }
-    else {
-      var gender = 'female';
-    }
-    if (dd <= 0 || dd > 31) {
-      alert("not a date");
-    }
-    else if (mm <= 0 || mm > 12) {
-      alert("not a month");
-    }
+  var gender = document.getElementById ("gender").value;
 
-    else if (Math.round(result) == 0 && gender === 'male') {
-        document.getElementById("final").innerHTML = ("Born on Sunday, Akan Name is " + maleNames[0]);
-      }
-      else if (Math.round(result) == 1 || Math.round(resul)== -1 && gender === 'male') {
-        document.getElementById("final").innerHTML = ("Born on Monday, Akan Name is " + maleNames[1]);
-      }
-      else if (Math.round(result) == 2 || Math.round(result) == -2 && gender === 'male') {
-        document.getElementById("final").innerHTML = ("Born on Tuesday, Akan Name is " + maleNames[2]);
-      }
-      else if (Math.round(result) == 3 || Math.round(result) == -3 && gender === 'male') {
-        document.getElementById("final").innerHTML = ("Born on Wednesday, Akan Name is " + maleNames[3]);
-      }
-      else if (Math.round(result) == 4 || Math.round(result) == -4 && gender === 'male') {
-        document.getElementById("final").innerHTML = ("Born on Thursday, Akan Name is" + maleNames[4]);
-      }
-      else if (Math.round(result) == 5 || Math.round(result) == -5 && gender === 'male') {
-        document.getElementById("final").innerHTML = ("Born on Friday, Akan Name is " + maleNames[5]);
-      }
-      else if (Math.round(result) == 6 || Math.round(result) == -6 && gender === 'male') {
-        document.getElementById("final").innerHTML = ("Born on Saturday, Akan Name is " + maleNames[6]);
-      }
-      else if (Math.round(result) == 0 && gender === 'female') {
-        document.getElementById("final").innerHTML = ("Born on Sunday, Akan Name is " + femaleNames[0]);
-      }
-      else if (Math.round(result) == 1 || Math.round(result) == -1 && gender === 'female') {
-        document.getElementById("final").innerHTML = ("Born on Monday, Akan Name is " + femaleNames[1]);
-      }
-      else if (Math.round(result) == 2 || Math.round(result) == -2 && gender === 'female') {
-        document.getElementById("final").innerHTML = ("Born on Tuesday, Akan Name is " + femaleNames[2]);
-      }
-      else if (Math.round(result) == 3 || Math.round(result) == -3 && gender === 'female') {
-        document.getElementById("final").innerHTML = ("Born on Wednesday, Akan Name is " + femaleNames[3]);
-      }
-      else if (Math.round(result) == 4 || Math.round(result) == -4 && gender === 'female') {
-        document.getElementById("final").innerHTML = ("Born on Thursday, Akan Name is" + femaleNames[4]);
-      }
-      else if (Math.round(result) == 5 || Math.round(result) == -5 && gender === 'female') {
-        document.getElementById("final").innerHTML = (" Born on Friday, Akan Name is" + femaleNames[5]);
-      }
-      else if (Math.round(result) == 6 || Math.round(result) == -6 && gender === 'female') {
-        document.getElementById("final").innerHTML = ("Born on Saturday, Akan Name is" + femaleNames[6]);
-      }
-    else {
-      alert("not found");
-    }
-  
+  let birthday = new Date(`${year}-${month}-${day}`)
+
+  let dateString = birthday.toDateString()
+
+  let birthDate = birthday.getDay()
+
+  if (gender == "male"){
+    let name = maleNames[birthDate]
+    alert ("Born on " +  dateString + " Thus Akan Name is " + name)
   }
 
-   
-   
+  else if (gender == "female"){
+    let name = femaleNames[birthDate]
+    alert ("Born on " +  dateString + " Thus Akan Name is " + name)
+  }
 
+  else {
+    alert("Gender undefined")
+  }    
+
+  if (month > 12 || month < 1){
+     alert ("Not a month")
+  }
+  if (day > 31 || month <1){
+    alert ("Not a date")
+  }
+}
